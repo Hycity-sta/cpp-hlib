@@ -1,0 +1,21 @@
+#pragma once
+
+#include <cstddef>
+
+namespace hlib
+{
+    class String_View
+    {
+        private:
+        char* data_;
+        int64_t length;
+
+        public:
+        String_View(char* data)
+            : data_ {data}
+            , length {data}
+        {}
+    };
+}
+
+/* vim:set filetype=cpp: */

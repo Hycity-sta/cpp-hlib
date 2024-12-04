@@ -16,3 +16,5 @@ namespace hlib
         hlib::print("\n");
     }
 }
+
+/* vim:set filetype=cpp: */

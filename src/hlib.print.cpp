@@ -1,4 +1,4 @@
-#include <hlib.print.hpp>
+#include <hlib.print>
 
 auto main(int argc, char** argv) -> int
 {

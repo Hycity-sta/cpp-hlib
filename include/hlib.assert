@@ -1,0 +1,20 @@
+#pragma once
+
+#include <exception>
+
+namespace hlib
+{
+    auto assert(bool condition, const char* detail) -> void
+    {
+        if (not condition)
+            throw std::runtime_error {detail};
+    }
+
+    auto except_argument(bool condition, const char* detail) -> void
+    {
+        if (not condition)
+            throw std::invalid_argument {detail};
+    }
+}
+
+/* vim:set filetype=cpp: */

@@ -1,8 +1,17 @@
-cpp:=clang++ -std=c++20 -I./
+.DEFAULT_GOAL:=all
 
-.PHONY: cache/hlib.print.test
-cache/hlib.print.test:
-	$(cpp) hlib.print.test.cpp --output=cache/hlib.print.test
+cpp:=clang++ -std=c++20 -I include/
+
+hlib.%:
+	@$(cpp) src/$@.cpp -o cache/$@
+	@echo build cache/$@
+
+hlib.print:
+hlib.assert:
+
+all:\
+	hlib.print\
+	hlib.assert
 
 clean:
 	rm cache/*
